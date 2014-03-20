@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+
+cd /p2-php/data
+if [ ! -d tmp ]
+then
+    mkdir admin cache compile cookie dat db idx logs pref session tmp
+fi
+
+cd /p2-php/rep2
+/usr/bin/php -S 0.0.0.0:8080 web.php
