@@ -1,0 +1,5 @@
+# A sample Gemfile
+source "https://rubygems.org"
+
+gem "grack", git: "https://github.com/schacon/grack.git"
+gem "thin"

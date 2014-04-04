@@ -1,0 +1,24 @@
+GIT
+  remote: https://github.com/schacon/grack.git
+  revision: c0435e17840c7468f3d749821c7f9aa1a5a92f74
+  specs:
+    grack (0.1.0)
+      rack
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    daemons (1.1.9)
+    eventmachine (1.0.3)
+    rack (1.5.2)
+    thin (1.6.2)
+      daemons (>= 1.0.9)
+      eventmachine (>= 1.0.0)
+      rack (>= 1.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  grack!
+  thin
