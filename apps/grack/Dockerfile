@@ -1,6 +1,6 @@
 # docker build -t yuanying/grack .
 # docker run -d -v /home/yuanying/repos:/var/repos -p 9872:9872 yuanying/grack
-FROM yuanying/ruby:2.1.1
+FROM yuanying/ruby:2.1
 MAINTAINER O. Yuanying "yuan-docker@fraction.jp"
 
 # RUN mkdir /grack

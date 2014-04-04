@@ -2,7 +2,7 @@
 #
 # VERSION               0.0.1
 #
-# docker build -t yuanying/ruby:2.1.1 .
+# docker build -t yuanying/ruby:2.1 .
 
 FROM      yuanying/ruby:base
 MAINTAINER O. Yuanying "yuan-docker@fraction.jp"
