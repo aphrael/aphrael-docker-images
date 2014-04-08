@@ -7,12 +7,13 @@ MAINTAINER O. Yuanying "yuan-docker@fraction.jp"
 WORKDIR /tmp
 ADD Gemfile /tmp/Gemfile
 ADD Gemfile.lock /tmp/Gemfile.lock
-RUN bundle install --vendor/cache
+RUN bundle install --path /tmp/vendor/cache
 
 ADD . /grack
 VOLUME ["/var/repos"]
 EXPOSE 9872
 
 WORKDIR /grack
-
-CMD ["bundle", "exec", "rackup", "--host", "0.0.0.0", "-p", "9872", "config.ru"]
+RUN bundle install --path /tmp/vendor/cache
+ENTRYPOINT ["bundle", "exec", "rackup"]
+CMD ["--host", "0.0.0.0", "-p", "9872", "config.ru"]
