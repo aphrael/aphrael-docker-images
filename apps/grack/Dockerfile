@@ -7,7 +7,7 @@ MAINTAINER O. Yuanying "yuan-docker@fraction.jp"
 WORKDIR /tmp
 ADD Gemfile /tmp/Gemfile
 ADD Gemfile.lock /tmp/Gemfile.lock
-RUN bundle install
+RUN bundle install --vendor/cache
 
 ADD . /grack
 VOLUME ["/var/repos"]
