@@ -3,7 +3,7 @@
 # docker build -t yuanying/rep2 .
 # docker run -d -v /home/yuanying/rep2/data:/p2-php/data -v /home/yuanying/rep2/ic:/p2-php/rep2/ic  -p 8080:8080 yuanying/rep2
 
-FROM ubuntu
+FROM ubuntu:precise
 MAINTAINER O. Yuanying "yuan-docker@fraction.jp"
 
 RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
