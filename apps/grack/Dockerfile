@@ -6,5 +6,6 @@ MAINTAINER O. Yuanying "yuan-docker@fraction.jp"
 VOLUME ["/var/repos"]
 EXPOSE 9872
 
+ENV RACK_ENV production
 ENTRYPOINT ["bundle", "exec", "rackup"]
-CMD ["--host", "0.0.0.0", "-p", "9872", "config.ru"]
+CMD ["--host", "0.0.0.0", "-p", "9872", "-s", "thin", "config.ru"]

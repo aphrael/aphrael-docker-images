@@ -1,0 +1,2 @@
+tmp_dir: '/tmp'
+image_dirs: ['/var/images']
