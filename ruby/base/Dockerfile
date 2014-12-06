@@ -4,7 +4,7 @@
 #
 # docker build -t yuanying/ruby:base .
 
-FROM      ubuntu
+FROM      ubuntu:precise
 MAINTAINER O. Yuanying "yuan-docker@fraction.jp"
 
 # make sure the package repository is up to date
