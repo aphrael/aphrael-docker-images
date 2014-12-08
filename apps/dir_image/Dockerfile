@@ -1,6 +1,6 @@
 # docker build -t yuanying/dir_image .
 # docker run -d -v /volumes/images:/var/images -p 9873:9873 yuanying/dir_image
-FROM ruby:2.1.5
+FROM yuanying/ruby:1.8.7
 MAINTAINER O. Yuanying "yuan-docker@fraction.jp"
 
 VOLUME ["/var/images"]
