@@ -30,7 +30,7 @@ saved_timestamp = nil
 while true do
   likes = client.likes(offset: offset)
   likes['liked_posts'].each do |like|
-    current_timestamp = like['timestamp']
+    current_timestamp = like['liked_timestamp']
     unless saved_timestamp
       open(timestamp_file, 'w') do |io|
         saved_timestamp = current_timestamp
