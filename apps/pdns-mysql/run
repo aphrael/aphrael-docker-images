@@ -1,11 +1,15 @@
 #!/bin/bash
 set -e
 
+RECURSOR_ADDRESS=${RECURSOR_ADDRESS:-8.8.8.8}
+
 sed -i "s/__REPLACE_DATABASE_HOST__/${MYSQL_PORT_3306_TCP_ADDR}/g" /etc/powerdns/pdns.conf
 sed -i "s/__REPLACE_DATABASE_PORT__/${MYSQL_PORT_3306_TCP_PORT}/g" /etc/powerdns/pdns.conf
 sed -i "s/__REPLACE_DATABASE_NAME__/${PDNS_MYSQL_DB_NAME}/g" /etc/powerdns/pdns.conf
 sed -i "s/__REPLACE_DATABASE_USER__/${PDNS_MYSQL_DB_USER}/g" /etc/powerdns/pdns.conf
 sed -i "s/__REPLACE_DATABASE_PASSWORD__/${PDNS_MYSQL_DB_PASSWORD}/g" /etc/powerdns/pdns.conf
+
+sed -i "s/__REPLACE_RECURSOR_ADDRESS__/${RECURSOR_ADDRESS}/g" /etc/powerdns/pdns.conf
 
 sed -i "s/__REPLACE_DATABASE_HOST__/${MYSQL_PORT_3306_TCP_ADDR}/g" /etc/powerdns/create-user.sql
 sed -i "s/__REPLACE_DATABASE_PORT__/${MYSQL_PORT_3306_TCP_PORT}/g" /etc/powerdns/create-user.sql
