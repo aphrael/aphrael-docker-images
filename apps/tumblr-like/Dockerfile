@@ -1,6 +1,6 @@
 # docker build -t yuanying/tumblr-like .
 # docker run -d -v /volumes/downloads:/usr/src/app/contents yuanying/tumblr-like
-FROM ruby:2.1.5-onbuild
+FROM ruby:2.3-onbuild
 MAINTAINER O. Yuanying "yuan-docker@fraction.jp"
 
 VOLUME ["/usr/src/app/contents"]
